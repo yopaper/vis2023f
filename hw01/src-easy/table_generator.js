@@ -5,7 +5,7 @@ const studentClassId = ["590", "598", "C52", "C53", "C71"];
 var characterTable = [];
 var csvData = [];
 var homeWorkNumber = 10;
-var studentNumber = 15;
+var studentNumber = 155;
 var csvText = "";
 function downloadCsvFile() {
     console.log("觸發下載");

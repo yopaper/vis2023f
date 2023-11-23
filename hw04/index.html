@@ -178,14 +178,15 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/vis2023f/hw<span style="color:red;">04</span>/src/ 檔案夾。
+      
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      我覺得這種資料呈現型式很適合呈現樹狀結構的交叉比對, 只是它會把圓餅圖的缺點放大<br>
+      只要有資料較小, 它就會幾乎顯示不出來
     </div>
   </div>
 
@@ -193,28 +194,40 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <table>
-        <tr>
-          <th>總分</th>
-          <th>完成後打勾</th>
-          <th>配分</th>
-          <th>分項描述</th>
-        </tr>
-        <tr>
-          <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
-        </tr>
+        <table>
+          <tr>
+            <th>總分</th>
+            <th>完成後打勾</th>
+            <th>配分</th>
+            <th>分項描述</th>
+          </tr>
+          <tr>
+            <td rowspan="7" id="myTotal"></td>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked="checked"></td>
+            <td id='m1'>2</td>
+            <td>Simple baseline 1 - 完成旭日圖</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked="checked"></td>
+            <td id='m2'>1</td>
+            <td>Simple baseline 2 - 完成頁面路徑</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked="checked"></td>
+            <td id='m3'>2</td>
+            <td>Medium baseline 1 - 加入Tooltip </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked="checked"></td>
+            <td id='m4'>2</td>
+            <td>Medium baseline 2 - 完成結論 </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="flipswitch" id="myCheckbox5"></td>
+            <td id='m5'>3</td>
+            <td>Strong baseline - 將兩個問題之間的意義以圖表呈現(可互動) </td>
+          </tr>
+  
       </table>
     </div>
   </div>
@@ -223,6 +236,9 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <iframe src="./src-sunburst/index.html" id="sunburst" style="background: white;"></iframe>
+      <h1>結論</h1>
+      從比例上看來, 不論工作地點何, 人們所採用的方法大致相同<br>
+      減少包裝、節約能源及再生材料皆是前三高比例的選項
     </div>
   </div>
 
@@ -272,6 +288,14 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
     }
 
     d3.select("#myTotal").html(score);    
