@@ -185,7 +185,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      看到節點拖著滑很好玩, 我也只能說節點拖著滑很好玩
     </div>
   </div>
 
@@ -201,19 +201,39 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>1</td>
+          <td>Simple baseline - 實作Force-directed tree呈現分組情況</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td id='m2'>1</td>
+          <td>Simple baseline - 使節點可以被拖拉移動 </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>1</td>
+          <td>Simple baseline - 將個人圖片放入節點圓圈中 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td id='m4'>1</td>
+          <td>Medium baseline - 滑鼠移動過去顯示該成員相關資訊 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked></td>
+          <td id='m5'>2</td>
+          <td>Medium baseline - 滑鼠移動過去放大節點及圖片 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked></td>
+          <td id='m6'>2</td>
+          <td>Medium baseline - 點擊節點可以展開或縮放 </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked></td>
+          <td id='m7'>2</td>
+          <td>Strong baseline - 利用蘋果成績圖環繞個人照片(小組) </td>
         </tr>
       </table>
     </div>
@@ -222,9 +242,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <iframe src="src/index.html" id="hw5_iframe" width="100%" height="4000pt" style="background: #888;"></iframe>
     </div>
   </div>
 
@@ -234,6 +252,14 @@
 
 
 <script>
+  var hw5_iframe = document.getElementById("hw5_iframe");
+  hw5_iframe.onload = ()=>{
+    setTimeout(()=>{
+      hw5_iframe.width = "100%";
+      hw5_iframe.height = hw5_iframe.contentWindow.document.body.scrollHeight+50;
+    }, 5000);
+  }
+
   $(function() {
     var f = function() {
       $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
@@ -265,6 +291,22 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+    if (d3.select("#myCheckbox6").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
+    }
+
+    if (d3.select("#myCheckbox7").property("checked")){
+      score += parseInt(d3.select('#m7').html());   
     }
 
     d3.select("#myTotal").html(score);    

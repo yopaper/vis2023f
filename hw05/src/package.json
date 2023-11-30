@@ -1,0 +1,14 @@
+{
+  "name": "bd8e0da350ad614b",
+  "main": "bd8e0da350ad614b@32.js",
+  "version": "32.0.0",
+  "homepage": "https://observablehq.com/d/bd8e0da350ad614b",
+  "author": {
+    "name": "梁佑駿's Workspace",
+    "url": "https://observablehq.com/@liang-you-jun-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
