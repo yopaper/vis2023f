@@ -1,21 +1,21 @@
-<!doctype html>
-<html lang="zh-Hant-TW">
-<head>
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://tjhsieh.github.io/vis2023f/hw10/index.html -->
+<html lang="zh-Hant-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Required meta tags -->
-<meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- D3, jquery -->
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+<script src="./index_files/d3.v3.min.js.下載" charset="utf-8"></script>
+<script src="./index_files/jquery-3.6.0.min.js.下載" charset="utf-8"></script>
 
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="./index_files/bootstrap.min.css" rel="stylesheet">
+<script src="./index_files/bootstrap.bundle.min.js.下載"></script>
 
 <title>作品集 Portfolio</title>
 <!-- https://alexlenail.me/NN-SVG/about.html -->
-<link rel="icon" href="../hw00/favicon.svg"/>
+<link rel="icon" href="https://tjhsieh.github.io/vis2023f/hw00/favicon.svg">
 <style type="text/css">
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
 
@@ -171,57 +171,104 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 10</h1>
+      <h1>作業 10 - 光影走廊</h1>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/vis2023f/hw<span style="color:red;">10</span>/src/ 檔案夾。
+      組長: 資工碩二 111598023 梁佑駿<hr>
+      
     </div>
-  </div>
-
-  <!-- ------------------------------------------------>
-  <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      組員一: 資工四 109590018 胡祐華<hr>
+      這次作業我負責的任務主要是配音，其實一開始聽說要做這個作業的時候還滿擔心，因為一開始以為要加入人機互動的元素進去，原來只需要撥放製作好的影片，但有一說一，要讓觀眾能更沉浸在整個環境當中還是很困難的，謝謝組員和組長的幫忙。
     </div>
+    <div class="col-md-12 twenty">
+      組員二: 資工四 109590028 吳凱印<hr>
+      這次作業我負責的任務是腳本的發想，一開始是由組長分配給我們不同的任務挑選，我選擇了腳本編寫，於是便收到了一份故事的流程，並思考故事要搭配怎麼樣的描述，由於組員較少一開始會擔心是否要做很多事，但其實也沒有，最後順利在美術館展示。
+    </div>
+    <div class="col-md-12 twenty">
+      組員三: 資工四 109590022 林云媐<hr>
+      在這一次的作業裡面，我觀摩到了各個組別的成果後，覺得都很厲害。雖然我有分配到影片剪輯的部分，但其實最後也沒有做到什麼事情。在看到自己組別完成的成品後，真心覺得我們的動畫做的很漂亮。畫面中在地上旋轉的指針帶走了我的目光，非常吸引人，讓人目不轉睛。多虧了組長和組員，有他們的努力才能展現給大家這份完美的作品。
+    </div>
+    <div class="col-md-12 twenty">
+      組員四:<hr>
+
+      </div>
+    <div class="col-md-12 twenty">
+      組員五:<hr>
+
+      </div>
+    <div class="col-md-12 twenty">
+      組員六:<hr>
+
+      </div> 
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <table>
-        <tr>
+        <tbody><tr>
           <th>總分</th>
           <th>完成後打勾</th>
           <th>配分</th>
           <th>分項描述</th>
         </tr>
         <tr>
-          <td rowspan="7" id="myTotal"></td>
+          <td rowspan="7" id="myTotal">1</td>
+          
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox0" checked></td>
+          <td id="m0">4</td>
+          <td>12.29 光影走廊完成簡報</td>
+        </tr>
+        <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td id="m1">1</td>
+          <td>組長收齊所有組員，12.29 美術館定位追蹤數據</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td id="m2">1</td>
+          <td>組長製作 HW10 作品集網頁 </td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td id="m3">1</td>
+          <td>光影走廊影片(112.12.29版)，使用Unity模擬器，發佈至 YouTube 360 Video，並放到HW10作品集網頁 </td>
+        </tr>      
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td id="m4">1</td>
+          <td>光影走廊影片(最後修正版)，使用Unity模擬器，發佈至 YouTube 360 Video，並放到HW10作品集網頁 </td>
         </tr>
-      </table>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5"></td>
+          <td id="m5">1</td>
+          <td>組長收光影走廊影片(高解析度)(112.12.29版、最後修正版)</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox6"></td>
+          <td id="m6">1</td>
+          <td>組長收光影走廊影片製作素材(Unity 專案檔、Observable 程式碼、照片、素材、錄音檔等)</td>
+        </tr>        
+      </tbody></table>
     </div>
   </div>
-
+12/29當天得到修改意見後，第17週、第18週，進行後續修改。
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
+      112.12.29
+      <hr>
+      <video id="video1" style="width:100%;max-width:100%;" controls="">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <hr>
+      113.01.12 最終版
+      <hr>
       <video id="video1" style="width:100%;max-width:100%;" controls="">
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
       </video>
@@ -241,6 +288,7 @@
     $('input').change(f).trigger('change');
   });
 
+  d3.select("#myCheckbox0").on("change",update);
   d3.select("#myCheckbox1").on("change",update);
   d3.select("#myCheckbox2").on("change",update);
   d3.select("#myCheckbox3").on("change",update);
@@ -255,6 +303,10 @@
 
     var score = 0;
 
+    if (d3.select("#myCheckbox0").property("checked")){
+      score += parseInt(d3.select('#m0').html());
+    }
+
     if (d3.select("#myCheckbox1").property("checked")){
       score += parseInt(d3.select('#m1').html());
     }
@@ -267,9 +319,22 @@
       score += parseInt(d3.select('#m3').html());   
     }
 
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+    if (d3.select("#myCheckbox6").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
+    }
+
     d3.select("#myTotal").html(score);    
   }
 </script>
 
-</body>
-</html>
+
+
+</div></body></html>
